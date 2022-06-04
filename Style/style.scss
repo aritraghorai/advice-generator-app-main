@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,700;1,400&display=swap");
+$Light_Cyan: hsl(193, 38%, 86%);
+$Neon_reen: hsl(150, 100%, 66%);
+
+$Grayish_Blue: hsl(217, 19%, 38%);
+$Dark_Grayish_Blue: hsl(217, 19%, 24%);
+$Dark_Blue: hsl(218, 23%, 16%);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Raleway;
+}
+body {
+  background-color: $Dark_Blue;
+}
+.container {
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.adviceComponent {
+  display: flex;
+  flex-direction: column;
+  background-color: $Dark_Grayish_Blue;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  .adviceName {
+    margin: 10px;
+    color: $Neon_reen;
+    font-size: smaller;
+    letter-spacing: 3px;
+  }
+  .advice {
+    color: $Light_Cyan;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+    font-size: x-large;
+  }
+  .logo {
+    color: $Light_Cyan;
+    margin-bottom: 10px;
+    margin-bottom: 2rem;
+  }
+}
+.logoClick {
+  position: relative;
+  cursor: pointer;
+  .backgroundLogo {
+    position: absolute;
+    left: -23px;
+    background-color: $Neon_reen;
+    padding: 0.8rem;
+    border-radius: 50%;
+    &:hover {
+      box-shadow: $Neon_reen 0px 0px 20px 4px;
+    }
+    img {
+      margin-top: 2px;
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .adviceComponent {
+    width: 30%;
+  }
+  .logo {
+    img {
+      content: url(../images/pattern-divider-desktop.svg);
+    }
+  }
+}
